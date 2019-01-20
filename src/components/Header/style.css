@@ -30,6 +30,9 @@
     border-color: initial;
     border-image: initial;
 }
+.Home__SubTitle::selection{
+    background: transparent;
+}
 .Home__HiddenSubTitle{
     text-transform: uppercase;
     line-height: 0.95em;
@@ -46,4 +49,8 @@
     border-color: initial;
     border-image: initial;
     padding: 0px 0.25rem;
+}
+.Home__HiddenSubTitle::selection{
+    background: rgb(255, 152, 0);
+    color: rgb(32, 35, 41);
 }

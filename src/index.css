@@ -3,3 +3,8 @@ body {
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
+
+*::selection{
+  background: rgb(32, 35, 41);
+  color: rgb(255, 152, 0);
+}

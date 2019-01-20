@@ -23,7 +23,11 @@ function HeroListElement(props) {
                 </div>
                 <div className="CharacterCard__TextWrapper"><span>ORIGIN</span><p>{origin.name}</p></div>
                 <div className="CharacterCard__TextWrapper"><span>LAST LOCATION</span>
-                    <p>{location.name}</p></div>
+                    <p>{location.name}</p>
+                </div>
+                <div className="CharacterCard__TextWrapper">
+                    <a href={`/personage/${id}`}>Show more...</a>
+                </div>
             </div>
         </article>
     )

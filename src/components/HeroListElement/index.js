@@ -2,29 +2,28 @@ import React from 'react';
 
 function HeroListElement(props) {
 
+    const {id, image, name, status, species, gender, origin, location} = props.hero;
+
     return(
         <article className="CharacterCard__Wrapper">
             <div data="card header" className="CharacterCard__ImgWrapper">
                 <div className="card-image">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/65.jpeg"
-                         alt="Chris"/>
+                    <img src={image} alt={name}/>
                 </div>
                 <div className="CharacterCard__Title">
-                    <h2 className="CharacterCard__Name">Chris</h2>
-                    <p className="CharacterCard__Description">id: 65 - created a year ago</p>
+                    <h2 className="CharacterCard__Name">{name}</h2>
+                    <p className="CharacterCard__Description">id: {id} - created a year ago</p>
                 </div>
             </div>
             <div data="card info" className="CharacterCard__InfoWrapper">
-                <div className="CharacterCard__TextWrapper"><span>STATUS</span><p>Alive</p>
+                <div className="CharacterCard__TextWrapper"><span>STATUS</span><p>{status}</p>
                 </div>
-                <div className="CharacterCard__TextWrapper"><span>SPECIES</span><p>Humanoid,
-                    Microverse inhabitant</p></div>
-                <div className="CharacterCard__TextWrapper"><span>GENDER</span><p>Male</p>
+                <div className="CharacterCard__TextWrapper"><span>SPECIES</span><p>{species}</p></div>
+                <div className="CharacterCard__TextWrapper"><span>GENDER</span><p>{gender}</p>
                 </div>
-                <div className="CharacterCard__TextWrapper"><span>ORIGIN</span><p>Rick's
-                    Battery Microverse</p></div>
+                <div className="CharacterCard__TextWrapper"><span>ORIGIN</span><p>{origin.name}</p></div>
                 <div className="CharacterCard__TextWrapper"><span>LAST LOCATION</span>
-                    <p>Rick's Battery Microverse</p></div>
+                    <p>{location.name}</p></div>
             </div>
         </article>
     )
